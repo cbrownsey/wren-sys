@@ -1,7 +1,11 @@
 [package]
 name = "wrenlet-sys"
+authors = ["Cameron Brownsey <root@cbrownsey.dev>"]
 version = "0.1.0"
 edition = "2021"
+description = "Bindings to the `Wren` C library."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/cbrownsey/wren-sys"
 
 [dependencies]
 
