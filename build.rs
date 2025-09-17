@@ -19,17 +19,17 @@ fn main() {
     //     .write_to_file(out_path.join("bindings.rs"))
     //     .expect("Couldn't write bindings.");
 
-    // let mut cc = cc::Build::new();
+    let mut cc = cc::Build::new();
 
-    // cc.file("wren/wren-0.4.0.c").warnings(false);
+    cc.file("wren/wren-0.4.0.c").warnings(false);
 
-    // if cfg!(feature = "meta") {
-    //     cc.define("WREN_OPT_META", Some("0"));
-    // }
+    if cfg!(feature = "meta") {
+        cc.define("WREN_OPT_META", Some("0"));
+    }
 
-    // if cfg!(feature = "random") {
-    //     cc.define("WREN_OPT_RANDOM", Some("0"));
-    // }
+    if cfg!(feature = "random") {
+        cc.define("WREN_OPT_RANDOM", Some("0"));
+    }
 
-    // cc.compile("wren");
+    cc.compile("wren");
 }
